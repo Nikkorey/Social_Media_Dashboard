@@ -36,6 +36,10 @@ h2 {
   font-size: 4.2rem;
 }
 
+h3 {
+  margin: 2rem 0;
+}
+
 h4 {
   font-weight: 400;
   letter-spacing: 0.4rem;
@@ -67,7 +71,6 @@ h5 {
 .article {
   background-color: #f0f2fa;
   padding: 2rem 0;
-  margin: 2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,6 +84,11 @@ h5 {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.article:hover {
+  background-color: #dadff1;
 }
 
 .facebook {
@@ -138,16 +146,10 @@ svg {
 .overview {
   background-color: #f0f2fa;
   padding: 2rem 2.5rem;
-  margin: 2rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   border-radius: 0.5rem;
 }
 
@@ -168,7 +170,7 @@ svg {
           align-items: flex-end;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 100px;
+  height: 110px;
 }
 
 .overview__info {
@@ -198,5 +200,13 @@ svg {
           align-items: flex-start;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 100px;
+  height: 110px;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 2rem;
 }
