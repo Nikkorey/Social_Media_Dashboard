@@ -20,13 +20,10 @@ body {
 }
 
 .container {
+  padding: 0 2rem;
   min-width: 320px;
   max-width: 1440px;
   margin: 0 auto;
-}
-
-.hero__container {
-  padding: 0 2rem;
 }
 
 /* Typography*/
@@ -55,12 +52,13 @@ h5 {
 
 .header {
   background-color: $Light-Grayish-Blue-Card-BG;
+  padding: 2rem 0 4rem 0;
 
   &__theme {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 }
 
@@ -163,4 +161,47 @@ svg {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2rem;
+
+  @media #{$brk-point-1024} {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Toggle */
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background: black;
+  -webkit-appearance: none;
+  border-radius: 20px;
+  outline: none;
+  transition: 0.2s;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  &:checked {
+    background: brown;
+  }
+
+  &::before {
+    z-index: 2;
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    transform: scale(0.9);
+    border: solid 0.1rem rgba(0, 0, 0, 0.5);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
+  }
+
+  &:checked::before {
+    left: 30px;
+  }
 }
