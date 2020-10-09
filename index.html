@@ -15,37 +15,30 @@
 
     <title>Frontend Mentor | [Challenge Name Here]</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <!-- Start of Header -->
     <header class="header">
       <div class="container">
         <!-- Start of Header Title -->
-        <div class="header__title">
-          <h1>Social Media Dashboard</h1>
-          <p>Total Followers: 23,004</p>
-        </div>
-        <!-- End of Header Title -->
+        <div class="header__container">
+          <div class="header__title">
+            <h1>Social Media Dashboard</h1>
+            <p>Total Followers: 23,004</p>
+          </div>
+          <!-- End of Header Title -->
 
-        <hr />
+          <hr />
 
-        <!-- Start of Theme -->
-        <div class="header__theme">
-          <p>Dark Mode</p>
-          <input type="checkbox" class="toggle" />
+          <!-- Start of Toggle Theme -->
+          <div class="header__theme">
+            <p>Dark Mode</p>
+            <input type="checkbox" class="header__toggle" />
+          </div>
+          <!-- End of Toggle Theme -->
         </div>
-        <!-- End of Theme -->
       </div>
+      
     </header>
     <!-- End of Header -->
 
@@ -53,8 +46,8 @@
       <section>
         <div class="container">
           <div class="grid">
-            <article class="article facebook">
-              <div class="social__container">
+            <article class="social facebook">
+              <div class="social__iconHero">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                   <path
                     fill="#178FF5"
@@ -64,7 +57,7 @@
                 <p>@nathanf</p>
               </div>
 
-              <div class="followers__container">
+              <div class="social__followers">
                 <h2>1987</h2>
                 <h4>Followers</h4>
               </div>
@@ -77,8 +70,8 @@
               </div>
             </article>
 
-            <article class="article twitter">
-              <div class="social__container">
+            <article class="social twitter">
+              <div class="social__iconHero">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17">
                   <path
                     fill="#1DA1F2"
@@ -88,7 +81,7 @@
                 <p>@nathanf</p>
               </div>
 
-              <div class="followers__container">
+              <div class="social__followers">
                 <h2>1044</h2>
                 <h4>Followers</h4>
               </div>
@@ -101,8 +94,8 @@
               </div>
             </article>
 
-            <article class="article instagram">
-              <div class="social__container">
+            <article class="social instagram">
+              <div class="social__iconHero">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                   <defs>
                     <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
@@ -119,7 +112,7 @@
                 <p>@realnathanf</p>
               </div>
 
-              <div class="followers__container">
+              <div class="social__followers">
                 <h2>11k</h2>
                 <h4>Followers</h4>
               </div>
@@ -132,8 +125,8 @@
               </div>
             </article>
 
-            <article class="article youtube">
-              <div class="social__container">
+            <article class="social youtube">
+              <div class="social__iconHero">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                   <path
                     fill="#C4032B"
@@ -143,7 +136,7 @@
                 <p>Nathan F.</p>
               </div>
 
-              <div class="followers__container">
+              <div class="social__followers">
                 <h2>8239</h2>
                 <h4>subscribers</h4>
               </div>
@@ -394,7 +387,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Nikko Rey Hular</a>.
     </div>
   </body>
 </html>
