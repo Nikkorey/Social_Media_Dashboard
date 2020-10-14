@@ -2,6 +2,25 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
+:root {
+  --primary-color: hsl(230, 17%, 14%);
+  --primary-variant: hsl(232, 19%, 15%);
+  --secondary-color: hsl(228, 28%, 20%);
+  --secondary-variant: hsl(228, 28%, 25%);
+  --tertiary-color: hsl(228, 34%, 66%);
+  --primary-text: hsl(0, 0%, 100%);
+  --toggle: linear-gradient(50deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+[data-theme="light"] {
+  --primary-color: hsl(0, 0%, 100%);
+  --primary-variant: hsl(225, 100%, 98%);
+  --secondary-color: hsl(227, 47%, 96%);
+  --secondary-variant: hsl(227, 47%, 90%);
+  --tertiary-color: hsl(228, 12%, 44%);
+  --primary-text: hsl(230, 17%, 14%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +35,8 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
-  color: $Dark-Grayish-Blue-Text;
+  color: var(--primary-text);
+  background-color: var(--primary-color);
 }
 
 .container {
@@ -46,8 +66,10 @@ h5 {
   font-size: 3rem;
 }
 
+/* Header */
+
 .header {
-  background-color: $Light-Grayish-Blue-Card-BG;
+  background-color: var(--primary-variant);
   padding: 2rem 0 4rem 0;
   height: 210px;
 
@@ -63,7 +85,6 @@ h5 {
     h1 {
       font-size: 2.1rem;
       font-weight: 700;
-      color: $Very-Dark-Blue-Text;
 
       @media #{$brk-point-1024} {
         font-size: 2.8rem;
@@ -73,6 +94,7 @@ h5 {
       font-size: 1.2rem;
       font-weight: 700;
       margin-top: 0.5rem;
+      color: var(--tertiary-color);
     }
   }
 
@@ -101,7 +123,7 @@ h5 {
     position: relative;
     width: 50px;
     height: 25px;
-    background: $Light-Grayish-Blue-Card-BG-Hover;
+    background: var(--toggle);
     -webkit-appearance: none;
     border-radius: 20px;
     outline: none;
@@ -110,27 +132,26 @@ h5 {
     cursor: pointer;
 
     &:checked {
-      background: $Dark-Grayish-Blue-Text;
+      background: var(--toggle);
     }
 
     &::before {
       z-index: 2;
       position: absolute;
       content: "";
-      left: 5px;
-      top: 2px;
+      left: 4px;
+      top: 2.5px;
       width: 20px;
       height: 20px;
-      background: white;
+      background: var(--primary-variant);
       border-radius: 50%;
       transform: scale(0.9);
-      border: solid 0.1rem rgba(0, 0, 0, 0.5);
       box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
       transition: 0.2s;
     }
 
     &:checked::before {
-      left: 20px;
+      left: 25px;
     }
   }
 }
@@ -146,7 +167,7 @@ h5 {
   }
 }
 .social {
-  background-color: $Light-Grayish-Blue-Card-BG;
+  background-color: var(--secondary-color);
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
@@ -156,7 +177,7 @@ h5 {
   cursor: pointer;
 
   &:hover {
-    background-color: $Light-Grayish-Blue-Card-BG-Hover;
+    background-color: var(--secondary-variant);
   }
 
   &__iconHero,
@@ -164,6 +185,12 @@ h5 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  &__iconHero {
+    p {
+      color: var(--tertiary-color);
+    }
   }
 
   &__results {
@@ -178,10 +205,6 @@ h5 {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    h2 {
-      color: $Very-Dark-Blue-Text;
-    }
   }
 
   svg {
@@ -207,11 +230,16 @@ h5 {
 
 /* Overview  */
 .overview {
-  background-color: $Light-Grayish-Blue-Card-BG;
+  background-color: var(--secondary-color);
   padding: 2rem 2.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border-radius: 0.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--secondary-variant);
+  }
 
   svg {
     margin: 0;
@@ -248,7 +276,7 @@ h5 {
     }
 
     h5 {
-      color: $Very-Dark-Blue-Text;
+      color: var(--primary-text);
     }
   }
 }
