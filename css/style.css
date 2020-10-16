@@ -7,6 +7,12 @@
   --tertiary-color: hsl(228, 34%, 66%);
   --primary-text: hsl(0, 0%, 100%);
   --toggle: linear-gradient(50deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --Lime-Green: hsl(163, 72%, 41%);
+  --Bright-Red: hsl(356, 69%, 56%);
+  --facebook: #178ff5;
+  --twitter: #1da1f2;
+  --instagram: linear-gradient(50deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --youtube: #c4032b;
 }
 
 [data-theme="light"] {
@@ -40,7 +46,7 @@ body {
 .container {
   padding: 0 2rem;
   min-width: 320px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -51,6 +57,14 @@ h2 {
 
 h3 {
   margin: 2rem 0;
+}
+
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 2.5rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
 }
 
 h4 {
@@ -66,8 +80,8 @@ h5 {
 /* Header */
 .header {
   background-color: var(--primary-variant);
-  padding: 2rem 0 4rem 0;
-  height: 210px;
+  padding: 3rem 0 4rem 0;
+  height: 220px;
 }
 
 @media (min-width: 1024px) {
@@ -129,6 +143,7 @@ h5 {
 
 .header__theme p {
   margin-right: 1.5rem;
+  color: var(--tertiary-color);
 }
 
 .header__toggle {
@@ -224,8 +239,12 @@ h5 {
 }
 
 .social__results p {
-  color: #1db489;
+  color: var(--Lime-Green);
   font-weight: 700;
+}
+
+.social__results .brightRed {
+  color: #c4032b;
 }
 
 .social__followers {
@@ -247,19 +266,20 @@ h5 {
 }
 
 .facebook {
-  border-top: solid #178ff5 0.4rem;
+  border-top: solid var(--facebook) 0.4rem;
 }
 
 .twitter {
-  border-top: solid #1da1f2 0.4rem;
+  border-top: solid var(--twitter) 0.4rem;
 }
 
 .instagram {
-  border-top: solid 0.4rem linear-gradient(to left, #df4896, #ee877e, #fdc366);
+  border-top: solid 0.4rem;
+  border-color: var(--instagram);
 }
 
 .youtube {
-  border-top: solid #c4032b 0.4rem;
+  border-top: solid var(--youtube) 0.4rem;
 }
 
 /* Overview  */
@@ -298,6 +318,10 @@ h5 {
   height: 110px;
 }
 
+.overview__results .brightRed {
+  color: var(--Bright-Red);
+}
+
 .overview__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -305,7 +329,7 @@ h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #1db489;
+  color: var(--Lime-Green);
 }
 
 .overview__info p {
@@ -333,10 +357,6 @@ h5 {
   font-weight: 700;
 }
 
-.overview__status h5 {
-  color: var(--primary-text);
-}
-
 .grid {
   display: -ms-grid;
   display: grid;
@@ -354,11 +374,10 @@ h5 {
 
 /* Footer */
 .attribution {
-  margin-top: 2rem;
-  font-size: 11px;
+  font-size: 16px;
   text-align: center;
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: var(--Lime-Green);
 }

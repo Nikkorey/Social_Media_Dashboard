@@ -10,6 +10,14 @@
   --tertiary-color: hsl(228, 34%, 66%);
   --primary-text: hsl(0, 0%, 100%);
   --toggle: linear-gradient(50deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --Lime-Green: hsl(163, 72%, 41%);
+  --Bright-Red: hsl(356, 69%, 56%);
+
+  // social media
+  --facebook: #178ff5;
+  --twitter: #1da1f2;
+  --instagram: linear-gradient(50deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --youtube: #c4032b;
 }
 
 [data-theme="light"] {
@@ -42,7 +50,7 @@ body {
 .container {
   padding: 0 2rem;
   min-width: 320px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -54,6 +62,11 @@ h2 {
 
 h3 {
   margin: 2rem 0;
+  @media #{$brk-point-1024} {
+    font-size: 2.5rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
 }
 
 h4 {
@@ -70,8 +83,8 @@ h5 {
 
 .header {
   background-color: var(--primary-variant);
-  padding: 2rem 0 4rem 0;
-  height: 210px;
+  padding: 3rem 0 4rem 0;
+  height: 220px;
 
   &__container {
     @media #{$brk-point-1024} {
@@ -116,6 +129,7 @@ h5 {
 
     p {
       margin-right: 1.5rem;
+      color: var(--tertiary-color);
     }
   }
 
@@ -195,8 +209,11 @@ h5 {
 
   &__results {
     p {
-      color: $Lime-Green;
+      color: var(--Lime-Green);
       font-weight: 700;
+    }
+    .brightRed {
+      color: #c4032b;
     }
   }
 
@@ -213,19 +230,20 @@ h5 {
 }
 
 .facebook {
-  border-top: solid #178ff5 0.4rem;
+  border-top: solid var(--facebook) 0.4rem;
 }
 
 .twitter {
-  border-top: solid #1da1f2 0.4rem;
+  border-top: solid var(--twitter) 0.4rem;
 }
 
 .instagram {
-  border-top: solid 0.4rem linear-gradient(to left, #df4896, #ee877e, #fdc366);
+  border-top: solid 0.4rem;
+  border-color: var(--instagram);
 }
 
 .youtube {
-  border-top: solid #c4032b 0.4rem;
+  border-top: solid var(--youtube) 0.4rem;
 }
 
 /* Overview  */
@@ -251,12 +269,16 @@ h5 {
     align-items: flex-end;
     justify-content: space-around;
     height: 110px;
+
+    .brightRed {
+      color: var(--Bright-Red);
+    }
   }
 
   &__info {
     display: flex;
     align-items: center;
-    color: $Lime-Green;
+    color: var(--Lime-Green);
 
     p {
       margin-left: 1rem;
@@ -274,10 +296,6 @@ h5 {
     p {
       font-weight: 700;
     }
-
-    h5 {
-      color: var(--primary-text);
-    }
   }
 }
 
@@ -294,10 +312,9 @@ h5 {
 /* Footer */
 
 .attribution {
-  margin-top: 2rem;
-  font-size: 11px;
+  font-size: 16px;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--Lime-Green);
 }
