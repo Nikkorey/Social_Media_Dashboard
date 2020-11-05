@@ -204,6 +204,7 @@ h5 {
   &__iconHero {
     p {
       color: var(--tertiary-color);
+      font-weight: 700;
     }
   }
 
@@ -304,6 +305,9 @@ h5 {
   grid-template-columns: 1fr;
   grid-gap: 2rem;
 
+  @media #{$brk-point-768} {
+    grid-template-columns: repeat(2, 1fr);
+  }
   @media #{$brk-point-1024} {
     grid-template-columns: repeat(4, 1fr);
   }
