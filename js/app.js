@@ -1,6 +1,6 @@
 const toggleSwitch = document.querySelector('input[type=checkbox]')
 
-const switchName = document.querySelector('.switchName')
+const switchName = document.querySelector('.theme__name')
 
 
 function switchTheme(e) {
