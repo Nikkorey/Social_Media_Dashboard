@@ -29,3 +29,30 @@ if(currentTheme) {
         switchName.textContent = "Light Mode"
       }
 }
+
+/* Counter increment */
+
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+     //set the value of counter innerText to 0
+    counter.innerText = "0";
+
+    const updateCounter = () => {
+        //store the data target and convert in numbers using +
+        const target = +counter.getAttribute('data-target');
+        //store in variable the counter text and convert in numbers using +
+        const c = +counter.innerText;
+
+        const increment = target / 250
+
+        if(c < target) {
+            counter.innerText = `${Math.ceil(c + increment)}`;
+            setTimeout(updateCounter, 1);
+        }else {
+            counter.innerText = target;
+        }
+    }
+
+    updateCounter();
+})
